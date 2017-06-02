@@ -1,0 +1,34 @@
+name: github.com/opspec-pkgs/docker.image.push
+description: pushes a docker image
+inputs:
+  imageTar:
+    file:
+      description: tar of image
+  imageName:
+    string:
+      constraints: { format: docker-image-ref }
+      description: name of image
+  username:
+    string:
+      constraints: { minLength: 1 }
+      description: username for auth w/ registry
+  password:
+    string:
+      constraints: { minLength: 1 }
+      description: password for auth w/ registry
+      isSecret: true
+  registry:
+    string:
+      description: registry to push to
+      default: https://hub.docker.com
+run:
+  container:
+    cmd: [ /cmd.sh ]
+    files:
+      /cmd.sh: /cmd.sh
+      /image.tar: imageTar
+    envVars:
+      imageName:
+      username:
+      password:
+    image: { ref: 'docker:17.05-dind' }
