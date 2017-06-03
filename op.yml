@@ -31,4 +31,5 @@ run:
       imageName:
       username:
       password:
+      registry:
     image: { ref: 'docker:17.05-dind' }
