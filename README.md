@@ -22,5 +22,5 @@ opctl run github.com/opspec-pkgs/docker.image.push#VERSION
 ```yaml
 op:
   pkg: { ref: github.com/opspec-pkgs/docker.image.push#VERSION }
-  inputs: { imageTar, username, password, registry }
+  inputs: { imageTar, imageName, username, password, registry }
 ```
