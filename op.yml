@@ -20,7 +20,7 @@ inputs:
   registry:
     string:
       description: registry to push to
-      default: https://registry-1.docker.io/v2/
+      default: docker.io
 run:
   container:
     cmd: [ /cmd.sh ]
