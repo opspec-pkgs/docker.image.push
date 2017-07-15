@@ -1,7 +1,7 @@
-# problem statement
+# Problem statement
 pushes a docker image
 
-# example usage
+# Example usage
 
 > note: in examples, VERSION represents a version of the docker.image.push pkg
 
@@ -22,5 +22,16 @@ opctl run github.com/opspec-pkgs/docker.image.push#VERSION
 ```yaml
 op:
   pkg: { ref: github.com/opspec-pkgs/docker.image.push#VERSION }
-  inputs: { imageTar, imageName, username, password, registry }
+  inputs: 
+    imageTar:
+    imageName:
+    username:
+    password:
+    registry:
 ```
+
+
+# Support
+
+join us on [![Slack](https://opspec-slackin.herokuapp.com/badge.svg)](https://opspec-slackin.herokuapp.com/)
+or [open an issue](https://github.com/opspec-pkgs/docker.image.push/issues)
