@@ -21,6 +21,7 @@ inputs:
     string:
       description: registry to push to
       default: docker.io
+version: 1.1.0
 run:
   container:
     cmd: [ /cmd.sh ]
