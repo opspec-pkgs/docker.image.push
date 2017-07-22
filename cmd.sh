@@ -1,10 +1,12 @@
 #!/bin/sh
 
+set -e
+
 echo "starting docker daemon"
 nohup dockerd \
 --host=unix:///var/run/docker.sock \
 --host=tcp://0.0.0.0:2375 \
---storage-driver=vfs &
+--storage-driver=overlay2 &
 
 echo ""
 sleep 2
