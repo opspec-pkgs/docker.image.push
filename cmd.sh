@@ -12,7 +12,7 @@ max_retries=2
 n=0
 until [ $n -ge $max_retries ]
 do
-  docker ps && break
+  docker ps > /dev/null 2>&1 && break
   n=$((n+1))
   sleep 3
 done
