@@ -5,6 +5,12 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.0] - 2017-10-25
+
+### Changed
+
+- Use overlay2 storage driver per updated docker default
+
 ## \[1.1.0] - 2017-07-20
 
 ## \[1.0.0] - 2017-06-03
