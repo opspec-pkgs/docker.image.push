@@ -5,6 +5,12 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.1] - 2018-03-03
+
+### Changed
+
+- Use password-stdin per docker cli guidance
+
 ## \[2.0.0] - 2017-10-25
 
 ### Changed

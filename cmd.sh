@@ -27,7 +27,7 @@ echo "loading image"
 docker image load -i /image.tar
 
 echo "logging in to registry"
-docker login -u "$username" -p "$password" "$registry"
+echo -n "$password" | docker login -u "$username" --password-stdin "$registry"
 
 echo "pushing image"
 docker image push "$imageName"
