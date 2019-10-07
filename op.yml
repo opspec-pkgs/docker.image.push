@@ -4,7 +4,7 @@ inputs:
   imageTar:
     file:
       description: tar of image
-  imageName:
+  imageRef:
     string:
       constraints: { format: docker-image-ref }
       description: name of image
@@ -17,20 +17,16 @@ inputs:
       constraints: { minLength: 1 }
       description: password for auth w/ registry
       isSecret: true
-  registry:
-    string:
-      description: registry to push to
-      default: docker.io
-version: 2.1.0
+version: 3.0.0
 run:
   container:
-    cmd: [ /cmd.sh ]
+    cmd:
+      - skopeo
+      - copy
+      - --dst-creds
+      - $(username):$(password)
+      - docker-archive:/imageTar
+      - docker:$(imageRef)
     files:
-      /cmd.sh:
-      /image.tar: $(imageTar)
-    envVars:
-      imageName:
-      username:
-      password:
-      registry:
-    image: { ref: 'docker:18.02.0-dind' }
+      /imageTar: $(imageTar)
+    image: { ref: 'opspecpkgs/docker.image.push:3.0.0' }

@@ -5,6 +5,13 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[3.0.0] - 2019-10-07
+
+### Changed
+
+- Move from DInD to Skopeo
+- `imageName` is now `imageRef`
+
 ## \[2.1.0] - 2018-03-07
 
 ### Added

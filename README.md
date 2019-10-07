@@ -15,27 +15,25 @@ the op uses [![opspec 0.1.5](https://img.shields.io/badge/opspec-0.1.5-brightgre
 ## Install
 
 ```shell
-opctl op install github.com/opspec-pkgs/docker.image.push#2.1.0
+opctl op install github.com/opspec-pkgs/docker.image.push#3.0.0
 ```
 
 ## Run
 
 ```
-opctl run github.com/opspec-pkgs/docker.image.push#2.1.0
+opctl run github.com/opspec-pkgs/docker.image.push#3.0.0
 ```
 
 ## Compose
 
 ```yaml
 op:
-  ref: github.com/opspec-pkgs/docker.image.push#2.1.0
+  ref: github.com/opspec-pkgs/docker.image.push#3.0.0
   inputs:
-    imageName:
+    imageRef:
     imageTar:
     password:
     username:
-    # params w/ default
-    registry:
 ```
 
 # Support
