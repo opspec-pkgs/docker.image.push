@@ -23,10 +23,10 @@ run:
     cmd:
       - skopeo
       - copy
-      - --dst-creds
-      - $(username):$(password)
+      - --dest-creds
+      - '$(username):$(password)'
       - docker-archive:/imageTar
-      - docker:$(imageRef)
+      - docker://$(imageRef)
     files:
       /imageTar: $(imageTar)
     image: { ref: 'opspecpkgs/docker.image.push:3.0.0' }
